@@ -1,0 +1,66 @@
+:root { 
+    height: 100%;
+    font-size: 62.5%;
+    --principal: rgb(93, 95, 239); 
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    font-size: 2em;
+}
+
+#email, #senha{
+    padding: 10px;
+    border: 1px solid var(--principal);
+    border-radius: 15px;
+   
+
+}
+
+
+.botao-principal {
+    font-size: 1.2em;
+    background-color: var(--principal);
+    border: 1px solid var(--principal);
+    border-radius: 25px;
+    width: 200px;
+}
+
+.botao-secundario{
+    background-color: white;
+    border: 1px solid var(--principal);
+    border-radius: 25px;
+    color: var(--principal);
+    width: 200px;
+}
+
+.botao-secundario a {
+    font-size: 1em;
+}
+
+
+input[value="Entrar"]{
+    color: white;
+}
+
+.principal{
+    color: var(--principal);
+}
+
+.navegacao {
+    background-color: var(--principal) !important;
+}
+
+.navegacao a {
+    color: white !important;
+}
+
+.navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler{
+    border: 1px solid white;
+}
+
+
