@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container-fluid">
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light navegacao">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon" id="color-white"></span>
-                </button>
-                <!--<a class="navbar-brand" href="#">Navbar</a>-->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito&display=swap">
+        <link rel="stylesheet" href="/css/style.css">
+        <title>Fintech - Dashboard</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navegacao">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" id="color-white"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#">Navbar</a>-->
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item">
-                            <img src="medias/images/logo-xs.png" alt="logo Fintech" id="logo" class="m-5">
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Geral <span class="sr-only"></span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Nova transação</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Objetivos</a>
-                        </li>
-                    </ul>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav m-2">
+                            <li class="nav-item">
+                                <img src="medias/images/logo-xs.png" alt="logo Fintech" id="logo" class="m-5">
+                            </li>
+                            <li class="nav-item active p-lg-5">
+                                <a class="nav-link link" href="">Geral <span class="sr-only"></span></a>
+                            </li>
+                            <li class="nav-item p-lg-5">
+                                <a class="nav-link link" href="">Nova transação</a>
+                            </li>
+                            <li class="nav-item p-lg-5">
+                                <a class="nav-link link " href="">Objetivos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <section class="d-flex flex-wrap transacao row m-4">
+                    <div class=" col-6 col-sm-9">
+                        <i class="bi bi-plus-circle secundaria"></i>
+                        <a href="" class="secundaria">Entradas</a>
+                    </div>
+                    <p class="col-6 col-sm-3">R$ 10200,00</p>
+                </section>
+                <section class="d-flex flex-wrap transacao row m-4">
+                    <div class="col-6 col-sm-9">
+                        <i class="bi bi-dash-circle secundaria"></i>
+                        <a href="" class="secundaria">Saídas</a>
+                    </div>
+                    <p class="col-6 col-sm-3">R$ 1962,20</p>
+                </section>
+                <section class="d-flex flex-wrap transacao row m-4">
+                    <div class="col-6 col-sm-9">
+                        <i class="bi bi-graph-up secundaria"></i>
+                        <a href="" class="secundaria">Saldo</a>
+                    </div>
+                    <p class="col-6 col-sm-3">R$ 8237,80</p>
+                </section> 
+                <div class="d-flex flex-column align-items-center">
+                    <div class="bloco-legenda d-flex align-items-center">
+                        <div class="legenda" id="saidas"></div>
+                        <p class="d-inline">Saídas</p>
+                    </div>
+                    <div class="bloco-legenda d-flex align-items-center">
+                        <div class="legenda" id="saldo"></div>
+                        <p class="d-inline">Saldo</p>
+                    </div>
                 </div>
-            </nav>
-        </header>   
-    </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
-</body>
+                <div id="graf"></div>
+                <div class="text-center col-sm-12 m-6">
+                    <a href="#" class="btn botao-principal m-4 p-3" id="botao-add">Adicionar transação</a>
+                </div>
+            </main>   
+        </div>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
 </html>

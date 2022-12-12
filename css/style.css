@@ -1,7 +1,11 @@
+/*GERAL ============================================================================================================*/
 :root { 
     height: 100%;
     font-size: 62.5%;
     --principal: rgb(93, 95, 239); 
+    --secundaria: rgb(51, 27, 201);
+    --terciaria: rgb(235, 8, 240);
+    --branco: rgb(245, 242, 245);
 }
 
 body{
@@ -9,15 +13,102 @@ body{
     font-size: 2em;
 }
 
+
+.principal{
+    color: var(--principal);
+}
+
+.secundaria{
+    color: var(--secundaria);
+}
+
+/*LOGIN ============================================================================================================*/
+
 #email, #senha{
     padding: 10px;
     border: 1px solid var(--principal);
     border-radius: 15px;
-   
-
 }
 
+input[value="Entrar"]{
+    color: var(--branco);
+}
 
+/*NAVBAR ============================================================================================================*/
+header{
+    text-align: center;
+}
+
+#navegacao {
+    background-color: var(--principal) !important;
+}
+
+#navegacao a {
+    color: var(--branco);
+}
+
+.navbar-light .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler{
+    border: 1px solid var(--branco);
+}
+
+.link {
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    width: 0%;
+    height: 0.1rem;
+    background-color: var(--branco);
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 400ms ease;
+}
+
+.link:hover::after {
+    left: 0%;
+    width: 100%;
+}
+
+/*DASHBOARD============================================================================================================*/
+
+.transacao {
+    border-bottom: 1px solid var(--secundaria);
+}
+
+section a {
+    text-decoration: none;
+}
+
+#graf {
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--secundaria) 0.00% 80%, var(--terciaria) 80%);
+}
+
+#saidas, #saldo{
+    height: 23px;
+    width: 23px;    
+    margin: 1em;
+}
+
+#saidas{
+    background-color: var(--terciaria);
+}
+
+#saldo{   
+    background-color: var(--secundaria);
+}
+
+/*BOTÕES==============================================================================================================================*/
 .botao-principal {
     font-size: 1.2em;
     background-color: var(--principal);
@@ -26,41 +117,37 @@ body{
     width: 200px;
 }
 
+#botao-add{
+    font-size: 1em;
+    color: var(--branco);
+}
+
+#botao-add:active{
+    color: var(--principal);
+}
+
 .botao-secundario{
-    background-color: white;
+    background-color: var(--branco);
     border: 1px solid var(--principal);
     border-radius: 25px;
     color: var(--principal);
     width: 200px;
 }
 
+.botao-secundario a{
+    text-decoration: none;
+}
+
+.botao-principal:active{
+    background-color: var(--branco);
+    color: var(--principal);
+}
+.botao-secundario:active,
+.botao-secundario a:active{
+    background-color: var(--principal);
+    color: var(--branco);
+}
+
 .botao-secundario a {
     font-size: 1em;
 }
-
-
-input[value="Entrar"]{
-    color: white;
-}
-
-.principal{
-    color: var(--principal);
-}
-
-.navegacao {
-    background-color: var(--principal) !important;
-}
-
-.navegacao a {
-    color: white !important;
-}
-
-.navbar-light .navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-light .navbar-toggler{
-    border: 1px solid white;
-}
-
-
